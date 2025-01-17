@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../assets/css/reset.css" />
+    <link rel="stylesheet" href="../assets/css/common.css" />
+    <link rel="stylesheet" href="../assets/css/sub.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>hillstate</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../assets/js/header.js"></script>
+  </head>
+  <body>
+    <div id="header"></div>
+    <main>
+      <section class="sub-title">
+        <p>조합소개</p>
+      </section>
+      <section class="sub-main">
+        <div class="sub-main-pager_pc">
+          <small>조합소개 > 인사말</small>
+          <b>인사말</b>
+        </div>
+        <nav class="sub-main-pager_m">
+          <div class="pager_m-title">
+            <p>조합소개 > 인사말</p>
+            <button class="pager_m-img"></button>
+          </div>
+          <ul class="pager_m-con">
+            <li class="pager_m-con-txt"><a href="#">인사말</a></li>
+            <li class="pager_m-con-txt"><a href="#">조합원자격</a></li>
+            <li class="pager_m-con-txt"><a href="#">임원명단</a></li>
+            <li class="pager_m-con-txt"><a href="#">오시는길</a></li>
+          </ul>
+        </nav>
+        <div class="sub-main-con">
+          <div class="con-left">
+            <div class="left-title">
+              <b class="left-title_m">인삿말</b>
+              <p>
+                “용인 역삼 개발지구의<br />
+                빛나는 미래가치와 함께하세요”
+              </p>
+              <div class="left-title-img">
+                <img src="../assets/image/sub_picture.png" />
+                <div class="left-title-img_name">
+                  <b>조합장</b><img src="../assets/image/name.png" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="con-right">
+            <p>
+              본 홍보물에 표현한 개발계획은 인·허가 및 관계기관의 계획에 따라
+              변경될 수 있으며, 세부적인 내용은 해당 인·허가청 및 견본주택에
+              문의 바랍니다. ※ 단지 인근의 각종 개발계획 및 도로 등의 기반시설은
+              인·허가나 정부 시책에 따라 변경 및 취소 가능한 바, 해당 인·허가청
+              및 현장에서 반드시 확인하시기 바라며, 시행 및 시공예정사와
+              무관합니다. ※ 모집공고 이후 관계법령, 조례, 각종 계획의 변경
+              등으로 도시기반시설 등이 변경될 수 있습니다. ※ 개발예정 사항은
+              국토교통부공시 자료 및 홍보자료를 참고한 것으로 관계기관의 사정에
+              따라 변경 또는 취소될 수 있으며, 시행 및 시공예정사와 무관합니다.
+              ※ 본 홍보물에 예정이라 표시된 시설 및 개발계획중인 사업은 시행 및
+              시공예정사와 무관합니다. ※ 현대건설 주식회사의 일반분양 사업장과
+              무관합니다.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <div id="footer"></div>
+
+    <script>
+      // 공통 함수 정의
+      function loadComponent(url, elementId) {
+        fetch(url)
+          .then((response) => response.text())
+          .then((data) => {
+            document.getElementById(elementId).innerHTML = data;
+
+            // Header가 로드된 후 hover 이벤트를 재적용
+            applyHoverEffect(); // 이벤트 적용 함수 호출
+            applyMobileEffect();
+            applyMobileEffect_2();
+            subEffect();
+          })
+          .catch((error) => console.error(`Error loading ${url}:`, error));
+      }
+
+      // Header와 Footer를 로드
+      loadComponent("../layout/header.jsp", "header");
+      loadComponent("../layout/footer.jsp", "footer");
+    </script>
+  </body>
+</html>

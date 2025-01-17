@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+    <link rel="stylesheet" href="./assets/css/common.css" />
+    <link rel="stylesheet" href="./assets/css/main.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <title>hillstate</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="./assets/js/header.js"></script>
+  </head>
+  <body>
+    <div id="header"></div>
+    <main class="main">
+      <section class="title">
+        <div class="title-m">
+          <img src="./assets/image/m_title.png" />
+        </div>
+        <picture class="title-img">
+          <source
+            srcset="./assets/image/title_m.png"
+            media="(max-width: 768px)"
+          />
+          <img src="./assets/image/title_p.png" alt="title" />
+        </picture>
+      </section>
+      <section class="notice">
+        <b>공지사항</b>
+        <ul>
+          <li>•&nbsp;&nbsp;&nbsp;시공사 “현대건설"로 선정 완료!</li>
+          <li>•&nbsp;&nbsp;&nbsp;2025년 조합원 모집 안내</li>
+          <li>•&nbsp;&nbsp;&nbsp;2024년 결산 및 재무재표 공고</li>
+          <li>•&nbsp;&nbsp;&nbsp;사업 개요 및 설명회 안내</li>
+        </ul>
+        <button class="notice-btn">더보기</button>
+      </section>
+      <section class="made">
+        <div class="made-num">
+          <div class="made-work made-work_1">
+            <div class="work-tit"><p>시행</p></div>
+            <div class="work-name">
+              <p><b>YH</b>&nbsp;용인역삼지구 에이치 지역주택조합</p>
+            </div>
+          </div>
+          <div class="made-work made-work_2">
+            <div class="work-tit"><p>신탁</p></div>
+            <div class="work-name">
+              <img
+                class="work-name_img_1"
+                src="./assets/image/무궁화신탁.png"
+              />
+            </div>
+          </div>
+          <div class="made-work made-work_3">
+            <div class="work-tit"><p>시공</p></div>
+            <div class="work-name">
+              <img
+                class="work-name_img_2"
+                src="./assets/image/현대건설.png"
+              />
+            </div>
+          </div>
+        </div>
+        <small class="made-two"
+          >※ 본 웹사이트의 이미지(CG, 사진, 이미지 컷 등)는 소비자의 이해를 돕기
+          위해<br />
+          촬영 또는 제작한 것으로 실제와 차이가 있을 수 있습니다.</small
+        >
+      </section>
+    </main>
+    <div id="footer"></div>
+
+    <script>
+      // 공통 함수 정의
+      function loadComponent(url, elementId) {
+        fetch(url)
+          .then((response) => response.text())
+          .then((data) => {
+            document.getElementById(elementId).innerHTML = data;
+
+            // Header가 로드된 후 hover 이벤트를 재적용
+            applyHoverEffect(); // 이벤트 적용 함수 호출
+            applyMobileEffect();
+            applyMobileEffect_2();
+          })
+          .catch((error) => console.error(`Error loading ${url}:`, error));
+      }
+
+      // Header와 Footer를 로드
+      loadComponent("layout/header.jsp", "header");
+      loadComponent("layout/footer.jsp", "footer");
+    </script>
+  </body>
+</html>
