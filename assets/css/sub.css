@@ -3,17 +3,31 @@
 .sub-title {
   width: 100%;
   height: 150px;
-  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-    url("/assets/image/sub_background.png") no-repeat center center;
-  background-size: cover;
+  overflow: hidden;
+  position: relative;
+}
+.sub-title-img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.sub-title-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.7);
 }
 .sub-title p {
   line-height: 150px;
   text-align: center;
-  font-size: 26px;
+  font-size: 1.625rem;
   font-weight: 500;
   color: #fff;
   text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.4);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
 }
 .sub-main {
   margin: 0 auto;
@@ -29,7 +43,7 @@
   margin-bottom: 51px;
 }
 .sub-main-pager_pc small {
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 500;
   line-height: 20.27px;
   width: 100%;
@@ -38,7 +52,7 @@
 }
 .sub-main-pager_pc b {
   marin-top: 2px;
-  font-size: 26px;
+  font-size: 1.625rem;
   font-weight: 500;
   line-height: 37.65px;
   text-align: center;
@@ -60,7 +74,7 @@
 }
 .left-title p {
   font-family: Noto Serif KR;
-  font-size: 26px;
+  font-size: 1.625rem;
   font-weight: 500;
   line-height: 37.36px;
   text-align: center;
@@ -105,6 +119,10 @@
 .sub-main-pager_m {
   display: none;
 }
+
+.m_top_btn {
+  display: none;
+}
 /***************** breakpoint *****************/
 @media (max-width: 768px) {
   .sub-main {
@@ -120,7 +138,7 @@
     display: none;
   }
   .sub-main-pager_pc small {
-    font-size: 14px;
+    font-size: 0.875rem;
     font-weight: 500;
     line-height: 20.27px;
     width: 100%;
@@ -129,7 +147,7 @@
   }
   .sub-main-pager_pc b {
     marin-top: 2px;
-    font-size: 26px;
+    font-size: 1.625rem;
     font-weight: 500;
     line-height: 37.65px;
     text-align: center;
@@ -147,14 +165,14 @@
 
   .left-title_m {
     display: block;
-    font-size: 26px;
+    font-size: 1.625rem;
     font-weight: 500;
     line-height: 37.65px;
     margin-bottom: 31px;
   }
   .left-title p {
     font-family: Noto Serif KR;
-    font-size: 26px;
+    font-size: 1.625rem;
     font-weight: 500;
     line-height: 37.36px;
     text-align: center;
@@ -211,10 +229,18 @@
     display: none;
   }
   .pager_m-con-txt {
-    font-size: 18px;
+    font-size: 1.125rem;
     font-weight: 500;
     line-height: 26.06px;
   }
-  .pager_m-con-txt a {
+  .m_top_btn {
+    display: block;
+    background: url("/assets/image/up_icon.svg") no-repeat center center;
+    width: 28px;
+    height: 28px;
+    position: sticky;
+    bottom: 190px;
+    right: 21px;
+    float: right;
   }
 }

@@ -87,3 +87,15 @@ function subEffect() {
       });
   });
 }
+
+function scrollTop() {
+  $(".m_top_btn").on("click", function () {
+    $("html ,body").animate(
+      {
+        scrollTop: 0,
+      },
+      200
+    );
+    return false;
+  });
+}

@@ -31,16 +31,17 @@ body {
   padding: 0 10px;
 }
 .lgb .lgb-title {
-  font-size: 1.625rem;
-  font-weight: 500;
-  color: #761914;
   width: auto;
   float: left;
   height: 100%;
   display: flex;
   align-items: center;
 }
-
+.lgb .lgb-title a {
+  font-size: 1.625rem;
+  font-weight: 500;
+  color: #761914;
+}
 .lgb .pc {
   float: right;
   height: 100%;
@@ -220,7 +221,7 @@ body {
   .m-menu-title p {
     float: left;
     line-height: 60px;
-    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: 500;
   }
   .m-menu-title .m-menu-img {
@@ -240,7 +241,7 @@ body {
   }
   .m-menu .m-submenu .m-submenu-name {
     color: rgba(0, 0, 0, 0.8);
-    font-size: 18px;
+    font-size: 1.125rem;
     font-weight: 500;
     line-height: 26.06px;
   }

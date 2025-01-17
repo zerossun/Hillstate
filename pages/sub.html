@@ -16,12 +16,19 @@
     />
     <title>hillstate</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="../assets/js/header.js"></script>
+    <script src="../assets/js/hillstate.js"></script>
   </head>
   <body>
     <div id="header"></div>
     <main>
       <section class="sub-title">
+        <picture class="sub-title-img">
+          <source
+            srcset="../assets/image/sub_background_m.png"
+            media="(max-width: 768px)"
+          />
+          <img src="../assets/image/sub_background.png" alt="sub_background" />
+        </picture>
         <p>조합소개</p>
       </section>
       <section class="sub-main">
@@ -75,6 +82,7 @@
           </div>
         </div>
       </section>
+      <button class="m_top_btn"></button>
     </main>
     <div id="footer"></div>
 
@@ -91,6 +99,7 @@
             applyMobileEffect();
             applyMobileEffect_2();
             subEffect();
+            scrollTop();
           })
           .catch((error) => console.error(`Error loading ${url}:`, error));
       }

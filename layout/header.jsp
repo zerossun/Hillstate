@@ -11,7 +11,9 @@
         <img src="/assets/image/logo.png" />
       </div>
       <nav class="lgb">
-        <p class="lgb-title">힐스테이트 용인역삼</p>
+        <p class="lgb-title">
+          <a href="/hillstate.html">힐스테이트 용인역삼</a>
+        </p>
         <ul class="pc">
           <li class="pc-menu">
             <a class="pc-menu-title" href="#">조합소개</a>
@@ -103,12 +105,6 @@
         <li class="m-menu">
           <div class="m-menu-title">
             <p>분양안내</p>
-            <button class="m-menu-img"></button>
-          </div>
-        </li>
-        <li class="m-menu">
-          <div class="m-menu-title">
-            <p>공지사항</p>
             <button class="m-menu-img"></button>
           </div>
         </li>
