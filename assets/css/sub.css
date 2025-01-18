@@ -29,10 +29,13 @@
   top: 0;
   width: 100%;
 }
+
+#sub_main {
+  padding-bottom: 60px;
+}
 .sub-main {
   margin: 0 auto;
   margin-top: 30px;
-  margin-bottom: 60px;
   padding: 38px 0 112px 0;
   width: 1000px;
   border-top: 1px solid #d9d9d9;
@@ -124,12 +127,15 @@
   display: none;
 }
 /***************** breakpoint *****************/
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
+  #sub_main {
+    padding-bottom: 116px;
+  }
+
   .sub-main {
     margin: 0 auto;
-    margin-top: 0px;
-    margin-bottom: 116px;
     padding: 0px;
+    margin-top: 0px;
     width: 100%;
     border-top: 0px;
     border-bottom: 0px;
@@ -239,7 +245,7 @@
     width: 28px;
     height: 28px;
     position: sticky;
-    bottom: 190px;
+    bottom: 22px;
     right: 21px;
     float: right;
   }

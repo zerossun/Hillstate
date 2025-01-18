@@ -67,7 +67,7 @@
           </li>
         </ul>
         <button class="mobile">
-          <img src="../assets/image/hambuger_icon.svg" />
+          <img src="/assets/image/hambuger_icon.svg" />
         </button>
       </nav>
       <div class="pc-nav_bg"></div>

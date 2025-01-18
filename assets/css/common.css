@@ -178,7 +178,7 @@ body {
 
 /***************** breakpoint *****************/
 
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
   /* header */
   .logo img {
     width: 135px;
@@ -261,6 +261,10 @@ body {
   }
   .fnb .fnb-ul {
     margin-top: 16px;
+    float: left;
+    display: block;
+  }
+  .fnb .fnb-ul li {
     float: left;
   }
   .fnb .fnb-ul li:nth-child(2) {

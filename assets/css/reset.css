@@ -108,8 +108,11 @@ section {
   display: block;
 }
 body {
-  background: #fff;
+  background: #f1f1f1;
   line-height: 1;
+}
+main {
+  background: #fff;
 }
 ol,
 ul {

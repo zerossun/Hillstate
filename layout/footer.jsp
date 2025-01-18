@@ -9,11 +9,11 @@
       <div class="fnb">
         <div class="fnb-btn">
           <button>
-            <img src="../assets/image/login_icon.png" />
+            <img src="/assets/image/login_icon.png" />
             <p>로그인</p>
           </button>
           <button>
-            <img src="../assets/image/call_icon.png" />
+            <img src="/assets/image/call_icon.png" />
             <p>문의전화</p>
           </button>
         </div>
